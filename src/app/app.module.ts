@@ -12,8 +12,7 @@ import { CardComponent } from './card/card.component';
   declarations: [
     AppComponent,
     TeamComponent,
-    CardComponent,
-    TeamComponent
+    CardComponent
   ],
   imports: [
     AlertModule.forRoot(),
