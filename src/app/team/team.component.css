@@ -1,0 +1,29 @@
+.team {
+  min-width:200px;
+  float:left;
+  margin-right:15px;
+}
+
+.team-role{
+  width:100%;
+  text-align:center;
+}
+
+.team-container {
+  min-height: 275px;
+}
+
+.btn-glyphicon {
+  padding:8px;
+  background:#ffffff;
+  margin-right:4px;
+}
+.icon-btn {
+  padding: 1px 15px 3px 2px;
+  border-radius:50px;
+}
+.profile-img{
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: cover !important;
+}

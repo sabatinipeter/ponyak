@@ -1,3 +1,69 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-tree-deciduous white"></span> Ponyak</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <div class="form-group navbar-form">
+            <input type="text" class="form-control textFilter-input" placeholder="Search">
+          </div>
+        </li>
+        <li>
+          <p class="navbar-btn">
+            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#teamModal" onclick="addTeamModal()">Add Team</a>
+          </p>
+        </li>
+        <li>
+          <p class="navbar-btn">
+            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#personModal" onclick="addPersonModal()">Add Person</a>
+          </p>
+        </li>
+        <li>
+          <p class="navbar-btn">
+            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#scenarioModal" onclick="popScenarioModal()">Save Scenario</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="body">
+  <div class="row">
+    <div class="col-sm-4 col-md-3 sidebar">
+
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title">Scenarios</h3>
+        </div>
+        <div class="panel-body">
+          <a href="#" data-href="deleteAll()" data-toggle="modal" data-target="#confirm-delete" class="pull-right">Delete All</a>
+          <div id="scenariosContainer" style="clear:both;"></div>
+        </div>
+      </div>
+
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">Free Agents</h3>
+        </div>
+        <div id="div2" class="panel-body bench">
+          <div id="peopleDiv" class="people-container" ondrop="drop(event, this)" ondragover="allowDrop(event)">
+            <app-card></app-card>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3">
+      <app-team></app-team>
+    </div>
+  </div>
+</div>
