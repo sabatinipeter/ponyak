@@ -56,14 +56,18 @@
         </div>
         <div id="div2" class="panel-body bench">
           <div id="peopleDiv" class="people-container" ondrop="drop(event, this)" ondragover="allowDrop(event)">
-            <app-card></app-card>
+            <div *ngFor="let card of cards">
+              <app-card name="{{card.name}}" image="{{card.image}}" position="{{card.position}}" notes="{{card.notes}}"></app-card>
+            </div>
           </div>
         </div>
       </div>
 
     </div>
     <div class="col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3">
-      <app-team></app-team>
+      <div *ngFor="let team of teams">
+        <app-team name="{{team.name}}" roles={{team.roles}}></app-team>
+      </div>
     </div>
   </div>
 </div>
