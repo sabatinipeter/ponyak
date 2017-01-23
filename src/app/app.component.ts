@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  @ViewChild(ModalComponent)
+  public readonly modal: ModalComponent;
 
   teams: any = [
       {
@@ -227,5 +231,9 @@ export class AppComponent {
         "notes": "beard"
     }
   ];
+
+  clicked(event) {
+    alert('Test');
+  }
 
 }

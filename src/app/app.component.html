@@ -18,12 +18,16 @@
         </li>
         <li>
           <p class="navbar-btn">
-            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#teamModal" onclick="addTeamModal()">Add Team</a>
+            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#teamModal"
+              onclick="addTeamModal()"
+              (click)="clicked($event)">Add Team</a>
           </p>
         </li>
         <li>
           <p class="navbar-btn">
-            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#personModal" onclick="addPersonModal()">Add Person</a>
+            <a href="#" class="btn btn-info" data-toggle="modal"
+            data-target="#personModal" onclick="addPersonModal()"
+            (click)="modal.show()">Add Person</a>
           </p>
         </li>
         <li>
@@ -35,6 +39,31 @@
     </div>
   </div>
 </nav>
+
+<app-modal>
+  <div class="app-modal-header">
+    <button type="button" class="close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">Add Team</h4>
+  </div>
+  <div class="app-modal-body">
+    <form>
+      <input type="hidden" id="teamId">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" value="">
+      </div>
+      <div class="form-group">
+        <label for="roles">Roles</label>
+        <input type="text" class="form-control" id="roles" placeholder="DL, Dev, etc...">
+      </div>
+    </form>
+  </div>
+  <div class="app-modal-footer">
+    <button type="button" id="addTeamButton" class="btn btn-primary" onclick="addTeam()">Add Team</button>
+  </div>
+</app-modal>
 
 <div class="container-fluid" id="body">
   <div class="row">

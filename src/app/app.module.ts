@@ -7,12 +7,14 @@ import { AlertModule } from 'ng2-bootstrap';
 import { AppComponent } from './app.component';
 import { TeamComponent } from './team/team.component';
 import { CardComponent } from './card/card.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TeamComponent,
-    CardComponent
+    CardComponent,
+    ModalComponent
   ],
   imports: [
     AlertModule.forRoot(),
